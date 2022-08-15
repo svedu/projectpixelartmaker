@@ -1,17 +1,17 @@
-// Select color input
-// Select size input
+// Select color, height, width input and the grid/container.
 var color = document.querySelector("#colorPicker");
 var height = document.querySelector("#inputHeight");
 var width = document.querySelector("#inputWidth");
 var grid = document.getElementById("pixelCanvas");
 
-// When size is submitted by the user, call makeGrid()
+// When size is submitted by the user, call makeGrid().
 var sizeSelector = document.querySelector("#sizePicker");
 sizeSelector.addEventListener('submit', (event) => {
     event.preventDefault();
     makeGrid(height, width);
 });
 
+// Clears the grid.
 function refresh(){
     let grid = document.querySelectorAll('tr');
     grid.forEach((row) => {
@@ -20,7 +20,7 @@ function refresh(){
 }
 
 function makeGrid(height, width) {
- // Your code goes here!
+ // Resets the grid first then creates the grid.
     refresh();
     for (var i = 1; i <= height.value; i++){
         var row = document.createElement('tr');
@@ -33,6 +33,7 @@ function makeGrid(height, width) {
     }
 }
 
+// Colors a cell of the grid when clicked.
 grid.addEventListener('click', function colorCell(cell) {
     cell.target.style.backgroundColor = color.value;
  });
