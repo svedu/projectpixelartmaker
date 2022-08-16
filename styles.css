@@ -1,11 +1,23 @@
+html {
+    background-color: black;
+}
+
+.artBox{
+    background-color: white;
+    padding:5% 0;
+}
+
 body {
     text-align: center;
+    font-family: Arial;
 }
 
 h1 {
-    font-family: Monoton;
+    font-family: 'Silkscreen', cursive;
     font-size: 70px;
     margin: 0.2em;
+    color:blue;
+    text-shadow: red 2.5px 1px;
 }
 
 h2 {
@@ -14,6 +26,10 @@ h2 {
 
 h2:first-of-type {
     margin-top: 0.5em;
+}
+
+#designCanvas {
+    font-size: 30px;
 }
 
 table,

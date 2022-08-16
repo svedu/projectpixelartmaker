@@ -11,11 +11,14 @@ sizeSelector.addEventListener('submit', (event) => {
     makeGrid(height, width);
 });
 
-// Clears the grid.
+// Clears the grid and its colors.
 function refresh(){
     let grid = document.querySelectorAll('tr');
     grid.forEach((row) => {
         row.remove();
+    });
+    grid.forEach((cell) =>{
+        cell.removeAttribute('style');
     });
 }
 
