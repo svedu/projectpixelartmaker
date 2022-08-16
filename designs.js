@@ -19,6 +19,7 @@ function refresh(){
     });
     grid.forEach((cell) =>{
         cell.removeAttribute('style');
+        cell.setAttribute('style', 'backgroundColor:white');
     });
 }
 
